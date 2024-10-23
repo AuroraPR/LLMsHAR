@@ -3,11 +3,11 @@
 
 shortcut = 'data-har.lnk'
 
-ini_date="2024-07-26 02:00:00"
-end_date="2024-07-27 01:59:59"
+ini_date="2024-07-28 02:00:00"
+end_date="2024-07-29 01:59:59"
 time_step = 1
-#users=["16fe","5b66","ed9c"]
-users=["5b66","ed9c"]
+users=["16fe","5b66","ed9c"]
+#users=["5b66","ed9c"]
 
 
 activity_rooms = {
@@ -89,7 +89,8 @@ def getStrDatefrom(day_number):
     return resulting_date.strftime("%Y-%m-%d")
 
 # GEMINI
-genai.configure(api_key=os.environ['API_KEY'])
+#genai.configure(api_key=os.environ['API_KEY'])
+genai.configure(api_key='AIzaSyAKopIqRASuXw7TY8a6WD7mi4saFRFqPfA')
 for model in genai.list_models():
     print(model.name)
 model = genai.GenerativeModel(model_name="gemini-1.5-flash-latest")
